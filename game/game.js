@@ -3,18 +3,9 @@ const debug = false
 var object_tela = document.querySelector("#tela")
 const tela = {
     obj: object_tela.getBoundingClientRect(),
-    largura: "98%",
-    altura: "98vh",
-    x: 0,
-    y: 0,
-    position(vx, vy){
-        
-    },
-    size(larg=lthis.argura, altu=this.altura){
-        this.obj = object_tela.getBoundingClientRect()
-        object_tela.style.height=`${altu}`
+    size(larg="800px",altu="500px"){   
         object_tela.style.width=`${larg}`
-        this.largura=object_tela.clientWidth
+        object_tela.style.height=`${altu}`
     }
 }
 //LEITURA DO TECLADO
@@ -25,3 +16,9 @@ window.addEventListener("keydown", ()=>{
     if(event.keyCode==68 || event.keyCode==65){key_player_move = event.keyCode}
     //if(debug){}console.log(key)
 })
+
+//TELA UPDATE
+function loop_tela(){
+    tela.obj = object_tela.getBoundingClientRect()
+    requestAnimationFrame(loop_tela)
+}loop_tela()

@@ -4,16 +4,11 @@ const player = {
     obj: "",
     x: "",
     y: "",
-    largura: "",
-    altura: "",
-    criar(x=tela.obj.x+object_tela.clientLeft , y=tela.obj.y+object_tela.clientLeft, larg=5, altu=5){
-        //atalizando valores do inicias
-        console.log(object_tela.clientLeft)
+    criar(x=tela.obj.x+(tela.obj.width/2) , y=tela.obj.y=object_tela.clientHeight/1.2, larg="40px", altu="40px"){
         this.x = x, object_player.style.left=`${this.x}px`
-        this.y = y, object_player.style.top=`${this.y}%`
-        this.largura = larg, object_player.style.width=`${this.largura}%`
-        this.altura = altu, object_player.style.height=`${this.altura}%`
-       
+        this.y = y, object_player.style.top=`${this.y}px`
+        object_player.style.width=`${larg}`
+        object_player.style.height=`${altu}`
     },
     move(){
         let speed = 7
@@ -49,10 +44,8 @@ const player = {
                 object_player.style.left=`${this.x}px`
             }
         }
-
+    },
+    loop(){
+        player.obj = object_player.getBoundingClientRect()
     }
 }
-function loop_player(){
-    player.obj=this.obj = object_player.getBoundingClientRect()
-    requestAnimationFrame(loop_player)
-}loop_player()
