@@ -1,9 +1,17 @@
-//player.criar(100, tela.obj.y+object_tela.clientLeft*3)
+tela.size(800, 500, 100, 50)
+function game_loop(){
+    tela.update()
+    requestAnimationFrame(game_loop)
+}game_loop()
 
-function loop(){
-    player.loop()
+var enm01 =new Enimigo(10, 10, 40, 40)
+enm01.criar("01")
+function gameplay_loop(){
+    player.update()
     player.move()
-    requestAnimationFrame(loop)
-}loop()
-tela.size()
-player.criar()
+    enm01.update()
+    enm01.move()
+    requestAnimationFrame(gameplay_loop)
+}gameplay_loop()
+
+player.criar(tela.obj.x+(tela.obj.width/2) , tela.altura/1.1, 40, 40)

@@ -3,10 +3,10 @@
     margin: 0%;
 }
 body {
-    overflow-x: hidden;  
+    
 }
 #tela {
+    position: absolute;
     border: black solid 2px;
-    margin: auto;
-    
+    -overflow:hidden; 
 }

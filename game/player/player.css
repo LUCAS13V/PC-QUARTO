@@ -1,11 +1,10 @@
 #player {
     /*borda*/
-    position: absolute;
-    display: block;
+    position: absolute;      
     border: blue solid 1px;
     border-radius: 25px;
     background-image: url("../assets/player.png");
-    background-position: center center;
+    background-position: center -3px;
     background-size: 90%;
     background-repeat: no-repeat;
 }
