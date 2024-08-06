@@ -13,7 +13,7 @@ const player = {
         this.y = y, this.altura = altu
     },
     move(){
-        let speed = 7
+        let speed = 3
         //DIREITA
         if(key_player_move==68){
             //se pl chegar no limite de tela no lado direito ent

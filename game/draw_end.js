@@ -4,7 +4,7 @@ function game_loop(){
     requestAnimationFrame(game_loop)
 }game_loop()
 
-var enm01 =new Enimigo(10, 10, 40, 40)
+var enm01 =new Enimigo(50, 10, 40, 40)
 enm01.criar("01")
 function gameplay_loop(){
     player.update()
