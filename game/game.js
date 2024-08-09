@@ -28,6 +28,7 @@ var key
 var key_player_move
 window.addEventListener("keydown", ()=>{
     //se d ou a click ent mudar key
+    //console.log(event.key)
     if(event.keyCode==68 || event.keyCode==65){key_player_move = event.keyCode}
 })
 

@@ -2,7 +2,6 @@
     /*borda*/
     position: absolute;      
     border: blue solid 1px;
-    border-radiuds: 25px;
     background-image: url("../assets/player.png");
     background-position: center -3px;
     background-size: 90%;
