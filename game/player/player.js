@@ -6,7 +6,7 @@ const player = {
     y: "",altura: "",
     //outras variveis
     obj: "",
-    speed: 3,
+    speed: 5,
     move: true, 
     criar(x , y, larg, altu){
         //definido valores inicias

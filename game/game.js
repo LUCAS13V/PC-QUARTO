@@ -23,6 +23,13 @@ const tela = {
         }
     }
 }
+//SCORE
+var score = 0
+let object_score = document.createElement("div")
+object_score.id="score"
+let level = 1
+
+document.body.appendChild(object_score)
 //LEITURA DO TECLADO
 var key
 var key_player_move
@@ -31,5 +38,7 @@ window.addEventListener("keydown", ()=>{
     //console.log(event.key)
     if(event.keyCode==68 || event.keyCode==65){key_player_move = event.keyCode}
 })
+//numeros aleatorios
+var random = (num) => Math.floor(Math.random(num)*num)
 
 if(debug){console.log(`TELA\nclient left ${object_tela.clientLeft}\nclient width ${object_tela.clientWidth}`)}
