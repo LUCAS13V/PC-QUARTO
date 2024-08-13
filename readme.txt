@@ -1,4 +1,2 @@
-versao 2.0 
-readme adiconado
-colisao adiconada
-
+versao 2.5 
+geracao de enimigos procedural feita
