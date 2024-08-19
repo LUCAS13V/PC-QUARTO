@@ -1,4 +1,8 @@
 .enm {
     position: absolute;
     border: blue solid 1px;
+    background-image: url("../assets/planta.png");
+    background-size: 110%;
+    background-position: center center;
+
 }

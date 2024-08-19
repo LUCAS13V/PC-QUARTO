@@ -13,8 +13,8 @@ const player = {
         this.x = x, this.largura = larg
         this.y = y, this.altura = altu
     },
-    
     update(){
+        //atalizando css
         player.obj = object_player.getBoundingClientRect()
         object_player.style.left=`${this.x}px`
         object_player.style.height=`${this.altura}px`
@@ -27,7 +27,7 @@ const player = {
                 if((this.x+this.largura) >= (tela.largura)-(object_tela.clientLeft+this.speed)){
                     //ent colocar pl no limite
                     this.x=((tela.largura-this.largura))
-                    key_player_move=0
+                    key_player_move=65
                 }else{
                     //se nao estiver no limite ent
                     this.x+=this.speed
@@ -37,13 +37,18 @@ const player = {
             if(key_player_move==65){
                 //if provisorio c x menor que, largura de borda?
                 if(this.x <= (object_tela.clientLeft)){
-                    key_player_move=0
+                    key_player_move=68
                     this.x=-object_tela.clientLeft
                 }else{
                     this.x-=this.speed
-     
+                    
                 }
             }
+        }
+        if(key_player_move==68){
+            object_player.style.transform=" scaleX(1)"
+        }if(key_player_move==65){
+            object_player.style.transform=" scaleX(-1)"
         }
     }
 }

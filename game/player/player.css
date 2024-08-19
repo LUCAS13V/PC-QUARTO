@@ -2,8 +2,8 @@
     /*borda*/
     position: absolute;      
     border: blue solid 1px;
-    background-image: url("../assets/player.png");
-    background-position: center -3px;
-    background-size: 90%;
+    background-image: url("../assets/charrador-side.png");
+    -background-position: center center;
+    background-size: 100%;
     background-repeat: no-repeat;
 }

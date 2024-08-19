@@ -1,11 +1,10 @@
+//ENIMIGOS EM ESPERA
 let enimigos_wait = []
-
-class Enimigo {9
-    object_enimigo=""
-    speed=3   
-    move = true
-    obj = ""
-    id = ""
+//CLASS ENIMIGOS
+class Enimigo {
+    object_enimigo=""   
+    move = true; speed=3 
+    obj = ""; id = ""
     constructor(x, y , larg, altu){
         this.x = x, this.y = y
         this.largura = larg, this.altura = altu
@@ -42,9 +41,9 @@ class Enimigo {9
         }
         //se todos enimigos estao agurdando
         if(enimigos_wait.length == enimigos.length){
-            score++
+            orda++
             //c pontucao cheagr em mas 10 ent
-            if(score >= level*5){
+            if(orda >= level*5){
                 //adicionar 1 enimigo
                 enm_max(1)
                 level++
@@ -60,12 +59,13 @@ class Enimigo {9
         //mover-se
         if(this.move){
             //COLISAO
+            //num 15 variante de distorcao
             if(
-            //se enimigo ficar estiver acima do player 
-            (this.y + this.largura >= player.y-this.speed)&&
-            //se passa para baixo do player 
-            (this.y < player.y+player.largura)&&
-            //se estiver dentro lado direito
+            //se enimigo ficar estiver a"cima" do player 
+            (this.y + this.largura-(15) >= player.y-this.speed)&&
+            //se passa para "baixo" do player 
+            (this.y+(15) < player.y+player.largura)&&
+            //se estiver dentro lado "direito"
             (player.x+player.largura) >= (this.x)&&
             //se estiver dentro lado esquerdo
             (player.x) < (this.x + this.largura)
@@ -75,14 +75,13 @@ class Enimigo {9
             }else{
                 //se nao esta coledindo ent
                 this.y+=this.speed+(enimigos.length/level)
-
+                this.object_enimigo.style.rotate=`${this.y}deg`
             }
         }
     }
     
 }
-
-//crindo lista de enimigos
+//CRINADO LISTA DE ENIMIGOS
 var enimigos = []
 function enm_max(num, mesclar=false){
     //funcao de zerar enimigos em jogo

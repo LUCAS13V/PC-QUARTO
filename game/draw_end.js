@@ -1,12 +1,16 @@
-tela.size(800, 500, 100, 50)
+//CRINADO TELA
+tela.size(800, 500, 100, 80)
 function game_loop(){
     tela.update()
     requestAnimationFrame(game_loop)
 }game_loop()
-
+//INIMIGOS INICIAS
 enm_max(2)
 function gameplay_loop(){
-    object_score.innerText=score
+    //add pontuacao e mas
+    object_orda.innerText=`HORDA(${orda})`
+    object_level.innerText=`LEVEL(${level})`
+
     //PLAYER
     //atalizando player
     player.update()
@@ -18,4 +22,4 @@ function gameplay_loop(){
     requestAnimationFrame(gameplay_loop)
 }gameplay_loop()
 
-player.criar(tela.obj.x+(tela.obj.width/2) , tela.altura/1.1, 40, 40)
+player.criar(tela.obj.x+(tela.obj.width/2) , tela.altura-60, 30, 60)
