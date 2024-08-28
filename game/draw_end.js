@@ -5,7 +5,10 @@ function game_loop(){
     requestAnimationFrame(game_loop)
 }game_loop()
 //INIMIGOS INICIAS
-enm_max(2)
+enm_max(5)
+level=3
+//PLAYER INIT
+player.criar(tela.obj.x+(tela.obj.width/2) , tela.altura-85, 30, 60)
 function gameplay_loop(){
     //add pontuacao e mas
     object_orda.innerText=`HORDA(${orda})`
@@ -21,5 +24,3 @@ function gameplay_loop(){
     }
     requestAnimationFrame(gameplay_loop)
 }gameplay_loop()
-
-player.criar(tela.obj.x+(tela.obj.width/2) , tela.altura-60, 30, 60)

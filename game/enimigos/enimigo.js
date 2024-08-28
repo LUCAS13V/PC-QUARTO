@@ -94,7 +94,7 @@ function enm_max(num, mesclar=false){
     }
     //criar enimigos
     for(let i=0; i < num;i++){
-        let enm_temp =new Enimigo(0,-100,40,40)
+        let enm_temp =new Enimigo(0,-100,39,48)
         enm_temp.x = random(tela.largura-enm_temp.largura)
         enm_temp.criar(enimigos.length)
         enimigos.push(enm_temp)
