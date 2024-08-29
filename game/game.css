@@ -11,20 +11,19 @@ body {
 }
 #tela {
     position: absolute; 
-    border: black solid 2px;
+    border: black solid 3px;
     overflow: hidden;
-    background-color: rgb(64, 149, 206);
-    background-image: url("./assets/fundo_casa.png");
-    background-position: left bottom;
+    background-color: white;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .scores {
     position: relative;
-    border: black solid 1px;
+    border: black solid 2px;
     margin: 2px;
     width: 200px;
     font-size: 20px;
     text-align: center;
-    background-color: white;
+    color: white;
 }

@@ -1,4 +1,7 @@
 const debug = false
+//CONFIG DE CORES   
+let border_color = "red"
+let fundo_color = " rgba(0 , 0, 0, 0.8)"
 //TELA DO JOGO 
 var object_tela = document.querySelector("#tela")
 const tela = {
@@ -8,7 +11,7 @@ const tela = {
     //outras variveis
     obj: object_tela.getBoundingClientRect(),
     css_update: true,
-    size(larg ,altu , x, y){   
+    criar(x, y, larg ,altu){   
         //definido variveis inicias
         this.largura = larg, this.x = x
         this.altura = altu, this.y = y
@@ -18,8 +21,8 @@ const tela = {
         if(this.css_update){
             object_tela.style.width=`${this.largura}px`
             object_tela.style.height=`${this.altura}px`
-            object_tela.style.top=`${this.y}px`
             object_tela.style.left=`${this.x}px`
+            object_tela.style.top=`${this.y}px`
         }
     }
 }
@@ -41,5 +44,3 @@ window.addEventListener("keydown", ()=>{
 })
 //numeros aleatorios
 var random = (num) => Math.floor(Math.random(num)*num)
-
-if(debug){console.log(`TELA\nclient left ${object_tela.clientLeft}\nclient width ${object_tela.clientWidth}`)}

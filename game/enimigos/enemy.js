@@ -72,6 +72,9 @@ class Enimigo {
             ){
                 //parar player
                 key_player_move=0
+                gameplay_screen.execute=false
+                death_screen.execute=true
+                death_screen.init()
             }else{
                 //se nao esta coledindo ent
                 this.y+=this.speed+(enimigos.length/level)
