@@ -1,25 +1,21 @@
-var object_player = document.querySelector("#player")
+var object_player = document.createElement("div")
 //OBEJETO PLAYER
 const player = {
     //valores inicias
     x: "",largura: "",
     y: "",altura: "",
     //outras variveis
-    obj: "",
     speed: 5,
     move: true, 
     criar(x , y, larg, altu){
         //definido valores inicias
         this.x = x, this.largura = larg
         this.y = y, this.altura = altu
+        object_tela.appendChild(object_player).id="player"
     },
     update(){
         //atalizando css
-        player.obj = object_player.getBoundingClientRect()
-        object_player.style.left=`${this.x}px`
-        object_player.style.height=`${this.altura}px`
-        object_player.style.top=`${this.y}px`
-        object_player.style.width=`${this.largura}px`
+        css_update(this.x, this.y, this.largura, this.altura, object_player)
         if(this.move){
             //DIREITA
             if(key_player_move==68){

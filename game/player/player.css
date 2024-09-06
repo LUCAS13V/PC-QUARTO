@@ -1,7 +1,7 @@
 #player {
     /*borda*/
     position: absolute;      
-    border: blue solid 1px;
+    -border: blue solid 1px;
     background-image: url("../assets/charrador-side.png");
     -background-position: center center;
     background-size: 100%;

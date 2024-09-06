@@ -3,35 +3,34 @@ let object_death = document.createElement("div")
 const death = {
     x: '',largura: '',
     y: '',altura:'',
-    obj: '',
     text: "voce morreu",
     criar(x, y, larg, altu){
         let txt = document.createElement("div")
         object_death.appendChild(txt).id="dt_txt"
         txt.innerHTML=`${this.text}`
-        object_tela.appendChild(object_death).id="dt_01"
+        object_tela.appendChild(object_death).id="death_01"
         this.x=x, this.largura=larg 
         this.y=y, this.altura=altu
+        
     },
     update(){
-        this.obj = object_death.getBoundingClientRect()
-        object_death.style.width=`${this.largura}px`
-        object_death.style.height=`${this.altura}px`
-        object_death.style.left=`${this.x}px`
-        object_death.style.top=`${this.y}px`
-        
+        css_update(this.x , this.y, this.largura, this.altura, object_death)
     }
 }
-//botoes
-let bt_01 = document.createElement("button")
-let bt_02 = document.createElement("button")
-object_death.appendChild(bt_01).id="bt_01"
-object_death.appendChild(bt_02).id="bt_02"
-bt_01.classList.add("bts")
-bt_02.classList.add("bts")
-//recomsar
-bt_02.addEventListener("click", ()=>{
-    window.location.reload()
+//BOTOES
+//home
+let bt_dt_01 = document.createElement("button")
+object_death.appendChild(bt_dt_01).id="bt_dt_01"
+bt_dt_01.classList.add("bts_dt")
+bt_dt_01.addEventListener("click", ()=>{
+    console.log("teste")
+    troca_tela(true)
 })
-//menu
-
+//restart
+let bt_dt_02 = document.createElement("button")
+object_death.appendChild(bt_dt_02).id="bt_dt_02"
+//evento restart
+bt_dt_02.classList.add("bts_dt")
+bt_dt_02.addEventListener("click", ()=>{
+    troca_tela(false, true, false)
+})
